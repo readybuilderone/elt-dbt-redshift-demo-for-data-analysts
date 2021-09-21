@@ -1,2 +1,1 @@
-# elt-dbt-redshift-demo-for-data-analysts
-elt-dbt-redshift-demo-for-data-analysts
+# ELT-DBT-Redshift-Demo for Data Analysts
