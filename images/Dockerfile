@@ -8,11 +8,11 @@ RUN ./aws/install
 # Copy the required files
 COPY requirements.txt ./
 COPY scripts/entrypoint.sh /entrypoint.sh
-ADD dbt_dags /
+COPY ./dbt_dags/. /dbt_dags/
 
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 # Set DBT profiles location
-ENV DBT_PROFILES_DIR=config
+ENV DBT_PROFILES_DIR=/dbt_dags/config
 
 ENTRYPOINT ["/entrypoint.sh"]

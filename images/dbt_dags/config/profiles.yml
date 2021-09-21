@@ -7,6 +7,6 @@ default:
       port: 5439
       user: "{{ env_var('REDSHIFT_USER') }}"
       pass: "{{ env_var('REDSHIFT_PASSWORD') }}"
-      dbname: redshift-db
-      schema: public
+      dbname: "{{ env_var('REDSHIFT_DBNAME') }}"
+      schema: "{{ env_var('REDSHIFT_SCHEMA') }}"
   target: dev
