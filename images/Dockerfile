@@ -14,5 +14,6 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 # Set DBT profiles location
 ENV DBT_PROFILES_DIR=/dbt_dags/config
+WORKDIR /dbt_dags
 
 ENTRYPOINT ["/entrypoint.sh"]
